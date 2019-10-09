@@ -1,0 +1,54 @@
+.navbar {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+#jumbotron1{
+    background-size: cover;
+    height: 557px;
+    margin-top: 0%;
+    background-image:url('../images/him.jpg');
+}
+.navbar{
+    margin-bottom: 0px;
+}
+#j1{
+    color: white;
+}
+#j1text{
+    padding-left: 55%;
+    padding-top: 5%;
+    padding-right: 11%;
+}
+#jumbotron2{
+background-size: cover;
+height: 600px;
+background-image:url("../images/food.jpg")
+
+}
+#j2text{
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-right: 45%;
+}
+#j1p{
+    color: white;
+    font-size: medium;
+}
+
+.card1 {
+    float:left;
+    display:inline-block;
+    margin-right:100px;
+}
+
+.card2 {
+    display:inline-block;
+}
+
+.card3 {
+    display: inline-block;
+    margin-left: 100px;
+}
+

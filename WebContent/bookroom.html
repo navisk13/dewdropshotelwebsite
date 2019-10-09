@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book A Room</title>
+ <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css'">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#adate" ).datepicker();
+  } );
+
+    $( function() {
+    $( "#ddate" ).datepicker();
+  } );
+
+  </script>
+
+</head>
+<body>
+<div id="navbar">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.jsp">Dewdrops Hotel</a>
+    </div>
+    <ul class="nav navbar-nav">
+	  <li><a href="bookingdetails.jsp">View Booking Details</a></li>
+      <li><a href="gallery.jsp">Gallery</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+<br>
+<br>
+<br>
+<center>
+<form method="post" action="Reserve" name="loginForm" novalidate ng-app="formValidationApp" ng-controller="ValidationCtrl">
+<div style="width: 400px;">
+</div> 
+<div style="padding-bottom: 18px;font-size : 24px;">Book a Room</div>
+<div  style="padding-bottom: 18px;">Select Room<span style="color: red;"> *</span><br/>
+<select type="option" name="room" style="width : 450px;   background-color: #FFFFFF;" id="room">
+  <option value="queen">Queen Suite</option>
+  <option value="princess">Princess Suite</option>
+  <option value="king">King Suite</option>
+  <option value="mountain">Mountain Suite</option>
+</select>
+</div>
+
+<div class="form-group" ng-class="{'has-error': loginForm.adate.$invalid && loginForm.adate.$dirty, 'has-success': loginForm.adate.$valid }" style="padding-bottom: 18px;">Arrival Date<span style="color: red;"> *</span><br/>
+<input type="text" id="adate" name="adate" style="width : 250px;" ng-model="user.adate" required />
+<p class="help-block" ng-if="loginForm.adate.$invalid && loginForm.adate.$dirty">Arrival Date should not be empty!</p>
+</div>
+
+<div class="form-group" ng-class="{'has-error': loginForm.ddate.$invalid && loginForm.ddate.$dirty, 'has-success': loginForm.ddate.$valid }" style="padding-bottom: 18px;">Departure Date<span style="color: red;"> *</span><br/>
+<input type="text" id="ddate" name="ddate" style="width : 250px;" ng-model="user.ddate" required />
+<p class="help-block" ng-if="loginForm.ddate.$invalid && loginForm.ddate.$dirty">Departure Date should not be empty!</p>
+</div>
+
+<div ng-class="{'has-error': loginForm.adults.$invalid && loginForm.adults.$dirty, 'has-success': loginForm.adults.$valid }" style="padding-bottom: 18px;">Number of adults<span style="color: red;"> *</span><br/>
+<input type="number" id="adults" name="adults" ng-model="user.adults" required style="width : 250px;"/>
+<p class="help-block" ng-if="loginForm.adults.$invalid && loginForm.adults.$dirty">Number of adults should not be empty!</p>
+</div>
+
+<div style="padding-bottom: 18px;">Number of children<br/>
+<input type="number" id="kids" name="kids" style="width : 250px;"/>
+</div>
+
+<div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit"/></div>
+</form>
+</center>
+
+<script>
+angular.module('formValidationApp', [])
+.controller('ValidationCtrl', function (){
+})
+</script>
+
+<style>
+input[type=text], select {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=number], select {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=password], select {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 25%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=reset] {
+  width: 25%;
+  background-color: #FF0000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
